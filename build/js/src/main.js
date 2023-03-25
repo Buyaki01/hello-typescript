@@ -12,3 +12,4 @@ const sum = (a, b) => {
 };
 let postID;
 let isActive;
+let re = /\w+/g;

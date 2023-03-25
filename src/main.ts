@@ -15,3 +15,5 @@ const sum = (a: number, b: number) => {
 
 let postID: string | number
 let isActive: number | boolean | string
+
+let re: RegExp = /\w+/g

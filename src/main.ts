@@ -117,3 +117,71 @@ enum Grade{
 }
 
 console.log(Grade.U) //starts from zero but in case you want it to start from 1, state U = 1
+
+type stringOrNumber = string | number
+type stringOrNumberArray = (string | number)[]
+
+type Drummer = {
+  name: string,
+  active: boolean,
+  albums: (string | number)[]
+}
+
+type Saxophonist = {
+  name: string,
+  active: boolean,
+  albums: stringOrNumberArray
+}
+
+//Difference between Type and Interface
+type UserId = stringOrNumber
+interface catID {
+  id: stringOrNumber
+}
+
+//Literal Types
+let yourName: 'Dave'
+let userName: 'Dave' | 'John' | 'Amy'
+
+userName = "Amy"
+
+//Functions
+const add = (a: number,b: number): number => {
+  return a + b
+}
+
+//Function that does not have a return, has a void type
+const logMsg = (message: any) => {
+  console.log(message)
+}
+
+logMsg('Hello!')
+logMsg(add(2, 3))
+logMsg(add('c', 5))
+
+let subtract = function(c: number, d: number): number {
+  return c - d
+}
+
+type mathFunction = (a: number, b: number) => number
+interface mathOperation{
+  (a: number, b: number): number
+}
+
+let multiply: mathFunction = function (c,d){
+  return c * d
+}
+
+logMsg(multiply(2,2))
+
+//Optional Parameters - they need to come last in the list
+const addAll = (a: number, b: number, c: number):number => {
+  return a + b + c
+}
+
+const addEveryThing = (a: number, b: number, c?: number):number => {
+  if(typeof c !== 'undefined' ){
+    return a + b + c
+  }
+  return a + b;
+}

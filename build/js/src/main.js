@@ -73,3 +73,35 @@ var Grade;
     Grade[Grade["A"] = 5] = "A";
 })(Grade || (Grade = {}));
 console.log(Grade.U); //starts from zero but in case you want it to start from 1, state U = 1
+//Literal Types
+let yourName;
+let userName;
+userName = "Amy";
+//Functions
+const add = (a, b) => {
+    return a + b;
+};
+//Function that does not have a return, has a void type
+const logMsg = (message) => {
+    console.log(message);
+};
+logMsg('Hello!');
+logMsg(add(2, 3));
+logMsg(add('c', 5));
+let subtract = function (c, d) {
+    return c - d;
+};
+let multiply = function (c, d) {
+    return c * d;
+};
+logMsg(multiply(2, 2));
+//Optional Parameters - they need to come last in the list
+const addAll = (a, b, c) => {
+    return a + b + c;
+};
+const addEveryThing = (a, b, c) => {
+    if (typeof c !== 'undefined') {
+        return a + b + c;
+    }
+    return a + b;
+};

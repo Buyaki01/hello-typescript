@@ -9,3 +9,7 @@ isLoading = true
 album = 'Ameniweka Huru'
 album = 2023
 album = true 
+
+const sum = (a: number, b: number) => {
+  return a + b
+}

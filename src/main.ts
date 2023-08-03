@@ -19,3 +19,5 @@ album = true
 const sum = (a: number, b: number) => {
   return a + b
 }
+
+let re: RegExp = /\w+/g

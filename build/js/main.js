@@ -15,3 +15,4 @@ album = true;
 const sum = (a, b) => {
     return a + b;
 };
+let re = /\w+/g;

@@ -60,3 +60,14 @@ const addAll = (a: number, b: number, c?: number): number => {// if you have an 
   }
   return a + b
 }
+
+// Default param value
+const sumAll = (a: number = 10, b: number, c: number = 2): number => {// you cannot do type aliase with default values
+  return a + b + c
+}
+
+logMsg(addAll(2,3,2))
+logMsg(addAll(2,3))
+logMsg(sumAll(2,3))
+logMsg(sumAll(undefined, 3))
+

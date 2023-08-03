@@ -17,3 +17,10 @@ const logMsg = (message) => {
 logMsg('Hello!');
 logMsg(add(2, 3));
 // logMsg(add('a',3)) //TypeScript will cause an error
+let subtract = function (c, d) {
+    return c - d;
+};
+let multiply = function (e, f) {
+    return e * f;
+};
+logMsg(multiply(2, 2));

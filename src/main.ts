@@ -36,3 +36,18 @@ const logMsg = (message: any): void => { //function has nothing to return, there
 logMsg('Hello!')
 logMsg(add(2,3))
 // logMsg(add('a',3)) //TypeScript will cause an error
+
+let subtract = function(c: number, d: number): number {
+  return c - d 
+}
+
+type mathFunction = (a: number, b: number) => number
+interface mathsFunction{
+  (a: number, b: number): number
+}
+
+let multiply: mathFunction = function (e,f) {
+  return e * f
+} 
+
+logMsg(multiply(2,2))

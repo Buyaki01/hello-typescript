@@ -58,3 +58,7 @@ let gh = {
     albums: ['I', 'II', 'IV']
 };
 zh = gh;
+const greetGuitarist = (guitarist) => {
+    return `Hello ${guitarist.name}!`;
+};
+console.log(greetGuitarist(jp));

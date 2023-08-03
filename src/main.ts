@@ -79,6 +79,12 @@ type Drummer = {
   albums: (string | number)[]
 }
 
+interface Violinist { //use interface when defining something I would think of like a class & ofcourse you might have methods on a class
+  name: string,
+  active?: boolean, //active is optional
+  albums: (string | number)[]
+}
+
 let zh: Drummer = {
   name: 'Eddie',
   active: false,
@@ -91,3 +97,9 @@ let gh: Drummer = {
 }
 
 zh = gh
+
+const greetGuitarist = (guitarist: Guitarist) => {
+  return `Hello ${guitarist.name}!`
+}
+
+console.log(greetGuitarist(jp))

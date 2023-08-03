@@ -49,3 +49,22 @@ const totalAmount = (a, ...nums) => {
     return a + nums.reduce((prev, currValue) => prev + currValue);
 };
 logMsg(totalAmount(10, 2, 3));
+const createError = (errMsg) => {
+    throw new Error(errMsg);
+};
+// it will return data type never, because the function below will result in an endless loop
+// const infinite = () => {
+//   let i: number = 1
+//   while (true) {
+//     i++
+//   }  
+// }
+// To stop the endless loop, add an if statement with a break
+const infinite = () => {
+    let i = 1;
+    while (true) {
+        i++;
+        if (i > 100)
+            break;
+    }
+};

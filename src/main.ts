@@ -83,3 +83,24 @@ const totalAmount = (a: number, ...nums: number[]): number => { //The rest must 
 }
 
 logMsg(totalAmount(10, 2, 3))
+
+const createError = (errMsg: string) => { //its for functions that explicitly throw errors
+  throw new Error(errMsg)
+}
+
+// it will return data type never, because the function below will result in an endless loop
+// const infinite = () => {
+//   let i: number = 1
+//   while (true) {
+//     i++
+//   }  
+// }
+
+// To stop the endless loop, add an if statement with a break
+const infinite = () => {
+  let i: number = 1
+  while (true) {
+    i++
+    if (i > 100) break
+  }  
+}

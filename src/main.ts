@@ -22,6 +22,18 @@ guitars = stringArr //This works because guitars array accepts both string and n
 // guitars = mixedData // (string | number)[] is NOT assignable to (string | number | boolean)[]
 mixedData = guitars 
 
+let test = []
+let bands: string[] = []
+bands.push('Adawange')
 
+// Tuple - used when you want to make array more strict in terms of order of data types
+let myTuple: [string, number, boolean] = ['Dave', 42, true] // [string, number, boolean]
 
+let mixed = ['John', 1, false] // (string | number | boolean)[]
+
+mixed = myTuple
+// myTuple = mixed // (string | number | boolean)[] is not assignable to [string, number, boolean]
+
+// myTuple[3] = 4 //There is no 4th position in the array, myTuple only accepts 3
+myTuple[1] = 42
 

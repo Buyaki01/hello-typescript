@@ -37,3 +37,57 @@ mixed = myTuple
 // myTuple[3] = 4 //There is no 4th position in the array, myTuple only accepts 3
 myTuple[1] = 42
 
+// Objects
+let myObj: object 
+myObj = []
+console.log(typeof myObj)
+myObj = bands
+myObj = {}
+
+const exampleObj = {
+  prop1: 'Dave',
+  prop2: true
+}
+
+// exampleObj.prop2 = 42 // Results into an error because prop2 is Boolean
+exampleObj.prop2 = false
+exampleObj.prop1 = 'John'
+
+type Guitarist = {
+  name: string,
+  active: boolean,
+  albums: (string | number)[]
+}
+
+let evh: Guitarist = {
+  name: 'Eddie',
+  active: false,
+  albums: [1984, 5150, 'OU812']
+}
+
+let jp: Guitarist = {
+  name: 'Jimmy',
+  active: true,
+  albums: ['I', 'II', 'IV']
+}
+
+evh = jp
+
+type Drummer = {
+  name: string,
+  active?: boolean, //active is optional
+  albums: (string | number)[]
+}
+
+let zh: Drummer = {
+  name: 'Eddie',
+  active: false,
+  albums: [1984, 5150, 'OU812']
+}
+
+let gh: Drummer = {
+  name: 'Jimmy',
+  albums: ['I', 'II', 'IV']
+}
+
+zh = gh

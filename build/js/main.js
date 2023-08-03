@@ -24,3 +24,37 @@ mixed = myTuple;
 // myTuple = mixed // (string | number | boolean)[] is not assignable to [string, number, boolean]
 // myTuple[3] = 4 //There is no 4th position in the array, myTuple only accepts 3
 myTuple[1] = 42;
+// Objects
+let myObj;
+myObj = [];
+console.log(typeof myObj);
+myObj = bands;
+myObj = {};
+const exampleObj = {
+    prop1: 'Dave',
+    prop2: true
+};
+// exampleObj.prop2 = 42 // Results into an error because prop2 is Boolean
+exampleObj.prop2 = false;
+exampleObj.prop1 = 'John';
+let evh = {
+    name: 'Eddie',
+    active: false,
+    albums: [1984, 5150, 'OU812']
+};
+let jp = {
+    name: 'Jimmy',
+    active: true,
+    albums: ['I', 'II', 'IV']
+};
+evh = jp;
+let zh = {
+    name: 'Eddie',
+    active: false,
+    albums: [1984, 5150, 'OU812']
+};
+let gh = {
+    name: 'Jimmy',
+    albums: ['I', 'II', 'IV']
+};
+zh = gh;

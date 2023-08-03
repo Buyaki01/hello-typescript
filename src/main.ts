@@ -1,7 +1,13 @@
 let myName: string = 'Dave'
-let meaningOfLife: Number
-let isLoading: Boolean
+let meaningOfLife: number
+let isLoading: boolean
 let album: any
+
+let cars: string | number //Union
+
+cars = "Benz"
+
+let isActive: number | boolean | string
 
 myName = 'Ritta'
 meaningOfLife = 42

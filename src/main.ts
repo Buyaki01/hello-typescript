@@ -23,3 +23,16 @@ let myName: 'Dave' //myName is of type Dave
 let userName: 'Dave' | 'Ritta' | 'Sweta'
 
 userName = 'Ritta'
+
+// functions
+const add = (a:number,b:number): number => {
+  return a + b
+}
+
+const logMsg = (message: any): void => { //function has nothing to return, therefore it has a void type of return data
+  console.log(message)
+}
+
+logMsg('Hello!')
+logMsg(add(2,3))
+// logMsg(add('a',3)) //TypeScript will cause an error

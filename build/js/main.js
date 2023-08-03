@@ -7,3 +7,13 @@ let myName; //myName is of type Dave
 // myName = 'Ritta' //Will result to an error, type Ritta is not assignable to type Dave
 let userName;
 userName = 'Ritta';
+// functions
+const add = (a, b) => {
+    return a + b;
+};
+const logMsg = (message) => {
+    console.log(message);
+};
+logMsg('Hello!');
+logMsg(add(2, 3));
+// logMsg(add('a',3)) //TypeScript will cause an error

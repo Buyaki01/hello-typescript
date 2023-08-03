@@ -71,3 +71,15 @@ logMsg(addAll(2,3))
 logMsg(sumAll(2,3))
 logMsg(sumAll(undefined, 3))
 
+// Rest Parameters
+const total = (...nums: number[]): number => {
+  return nums.reduce((prev, currValue) => prev + currValue)
+}
+
+logMsg(total(1,2,3,4))
+
+const totalAmount = (a: number, ...nums: number[]): number => { //The rest must always come at the end
+  return a + nums.reduce((prev, currValue) => prev + currValue)
+}
+
+logMsg(totalAmount(10, 2, 3))

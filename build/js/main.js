@@ -40,3 +40,12 @@ logMsg(addAll(2, 3, 2));
 logMsg(addAll(2, 3));
 logMsg(sumAll(2, 3));
 logMsg(sumAll(undefined, 3));
+// Rest Parameters
+const total = (...nums) => {
+    return nums.reduce((prev, currValue) => prev + currValue);
+};
+logMsg(total(1, 2, 3, 4));
+const totalAmount = (a, ...nums) => {
+    return a + nums.reduce((prev, currValue) => prev + currValue);
+};
+logMsg(totalAmount(10, 2, 3));

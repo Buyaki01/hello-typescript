@@ -1,23 +1,6 @@
-let myName: string = 'Dave'
-let meaningOfLife: number
-let isLoading: boolean
-let album: any
+let stringArr = ['one', 'hey', 'Dave'] // string[]
 
-let cars: string | number //Union
+let guitars = ['Strat', 'Les Paul', 5150] // (string | number)[]
 
-cars = "Benz"
+let mixedData = ['EVH', 1984, true] // (string | number | boolean)[]
 
-let isActive: number | boolean | string
-
-myName = 'Ritta'
-meaningOfLife = 42
-isLoading = true
-album = 'Ameniweka Huru'
-album = 2023
-album = true 
-
-const sum = (a: number, b: number) => {
-  return a + b
-}
-
-let re: RegExp = /\w+/g

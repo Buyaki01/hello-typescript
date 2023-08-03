@@ -62,3 +62,23 @@ const greetGuitarist = (guitarist) => {
     return `Hello ${guitarist.name}!`;
 };
 console.log(greetGuitarist(jp));
+// Enums
+// Unlike most TypeScript features, Enums are not a type-level addition to JavaScript but something added to the language and runtime
+var Grade;
+(function (Grade) {
+    Grade[Grade["U"] = 0] = "U";
+    Grade[Grade["D"] = 1] = "D";
+    Grade[Grade["C"] = 2] = "C";
+    Grade[Grade["B"] = 3] = "B";
+    Grade[Grade["A"] = 4] = "A";
+})(Grade || (Grade = {}));
+console.log(Grade.A); // Outputs 4
+var Colors;
+(function (Colors) {
+    Colors[Colors["RED"] = 14] = "RED";
+    Colors[Colors["GREEN"] = 15] = "GREEN";
+    Colors[Colors["GRAY"] = 16] = "GRAY";
+    Colors[Colors["YELLOW"] = 17] = "YELLOW";
+    Colors[Colors["AMBER"] = 18] = "AMBER";
+})(Colors || (Colors = {}));
+console.log(Colors.RED); // Outputs 14

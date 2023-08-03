@@ -51,3 +51,12 @@ let multiply: mathFunction = function (e,f) {
 } 
 
 logMsg(multiply(2,2))
+
+// Optional Parameters
+const addAll = (a: number, b: number, c?: number): number => {// if you have an optional parameter it has to be last in the list
+  //a + b + c //if you leave it there, there will be an error on c, c is possibly undefined as its optional. Therefore need a type card
+  if (typeof c !== 'undefined') {
+    return a + b + c
+  }
+  return a + b
+}

@@ -32,3 +32,17 @@ let nextVal: number = addOrConcat(2, 2, 'concat') as number
 
 (10 as unknown) as string //double assertions, double casting
 
+// The DOM
+// const img = document.querySelector('img') // Infers that it is: HTMLImageElement | null
+// img.src // Result in an error because img is possibly null
+
+const img = document.querySelector('img') as HTMLImageElement
+img.src
+
+const mymg = document.querySelector('#img') // TS infers that mymg is Element | null, not so specific, it just infers element
+
+// const myImg = document.getElementById('#img') // TS infers that myImg is HTMLElement | null, at least more specific
+// myImg.src // Will result in an error because myImg could be null
+
+const myImg = document.getElementById('#img') 
+myImg.src

@@ -44,5 +44,12 @@ const mymg = document.querySelector('#img') // TS infers that mymg is Element | 
 // const myImg = document.getElementById('#img') // TS infers that myImg is HTMLElement | null, at least more specific
 // myImg.src // Will result in an error because myImg could be null
 
-const myImg = document.getElementById('#img') 
+// const myImg = document.getElementById('#img')! // The ! at the end of the statement is a non-null assertions
+// myImg.src //there will be no error on myImg after adding the ! mark. There will be an error on the .src because myImg is an HTMLElement and .src does not exist on type HTMElement
+
+// const myImg = document.getElementById('#img')! as HTMLImageElement // We can now remove the !, non-null assertion
+// myImg.src // You don't need to use both the !, the non-null assertion and the as HTMLImageElement
+
+const myImg = document.getElementById('#img') as HTMLImageElement // We can now remove the !, non-null assertion
 myImg.src
+

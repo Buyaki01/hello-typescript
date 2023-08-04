@@ -36,4 +36,5 @@ const mymg = document.querySelector('#img'); // TS infers that mymg is Element |
 // const myImg = document.getElementById('#img')! as HTMLImageElement // We can now remove the !, non-null assertion
 // myImg.src // You don't need to use both the !, the non-null assertion and the as HTMLImageElement
 const myImg = document.getElementById('#img'); // We can now remove the !, non-null assertion
+const nextImg = document.getElementById('#img'); // Though this way will not work in tsx files for React
 myImg.src;

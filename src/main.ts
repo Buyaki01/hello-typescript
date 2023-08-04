@@ -14,4 +14,10 @@ let d = <One>'World'
 console.log(d)
 let e = <string | number>'World' // when working with React, using type assertions like this is not a common practice
 
+// Use assertions for narrowing
+const addOrConcat = (a: number, b: number, c: 'add' | 'concat'): number | string => {
+  if (c === 'add') return a + b
+  return '' + a + b
+}
 
+let myVal: string = addOrConcat(2, 2, 'concat') as string

@@ -1,5 +1,5 @@
 class Coder {
-  
+
   secondLang!: string
 
   constructor(
@@ -14,3 +14,5 @@ class Coder {
     this.lang = lang
   }
 }
+
+const Dave = new Coder('Dave', 'Rock', 42, 'Typescript')

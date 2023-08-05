@@ -32,5 +32,12 @@ class WebDev extends Coder {
 }
 const Ritta = new WebDev('Mac', 'Ritta', 'soft music', 27);
 console.log(Ritta.getLang());
-// console.log(Ritta.age)
-// console.log(Ritta.lang)
+class Guitarist {
+    constructor(name, instrument) {
+        this.name = name;
+        this.instrument = instrument;
+    }
+    play(action) {
+        return `${this.name} ${action} the ${this.instrument}`;
+    }
+}

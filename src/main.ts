@@ -45,3 +45,22 @@ console.log(Ritta.getLang())
 // console.log(Ritta.age)
 // console.log(Ritta.lang)
 
+interface Musician {
+  name: string,
+  instrument: string,
+  play(action: string): string
+}
+
+class Guitarist implements Musician {
+  name: string
+  instrument: string
+
+  constructor(name: string, instrument: string) {
+    this.name = name
+    this.instrument = instrument
+  }
+
+  play(action: string) {
+    return `${this.name} ${action} the ${this.instrument}`
+  }
+}

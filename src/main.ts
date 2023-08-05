@@ -64,3 +64,6 @@ class Guitarist implements Musician {
     return `${this.name} ${action} the ${this.instrument}`
   }
 }
+
+const Page = new Guitarist('Jimmy', 'guitar')
+console.log(Page.play('strums'))

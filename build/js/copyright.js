@@ -4,7 +4,7 @@
 // const thisYear = new Date().getFullYear()
 // year.setAttribute("datetime", thisYear)
 // year.textContent = thisYear
-const year = document.getElementById("year");
+const year = document.getElementById("year"); // or HTMLSpanElement
 const thisYear = new Date().getFullYear();
 year.setAttribute("datetime", thisYear.toString());
 year.textContent = thisYear.toString();

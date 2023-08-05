@@ -1,6 +1,6 @@
 "use strict";
 class Coder {
-    constructor(name, music, age, lang) {
+    constructor(name, music, age, lang = 'Typescript') {
         this.name = name;
         this.music = music;
         this.age = age;
@@ -11,4 +11,4 @@ class Coder {
         this.lang = lang;
     }
 }
-const Dave = new Coder('Dave', 'Rock', 42, 'Typescript');
+const Dave = new Coder('Dave', 'Rock', 42);

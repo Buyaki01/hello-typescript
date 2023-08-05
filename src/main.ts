@@ -6,7 +6,7 @@ class Coder {
     public readonly name: string, 
     public music: string, 
     private age: number, 
-    protected lang: string
+    protected lang: string = 'Typescript'
   ) {
     this.name = name
     this.music = music
@@ -15,4 +15,4 @@ class Coder {
   }
 }
 
-const Dave = new Coder('Dave', 'Rock', 42, 'Typescript')
+const Dave = new Coder('Dave', 'Rock', 42)

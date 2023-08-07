@@ -7,10 +7,15 @@ const todaysTransactions = {
     Books: -5,
     Job: 50
 };
-console.log(todaysTransactions.Pizza);
-console.log(todaysTransactions['Pizza']);
+console.log(todaysTransactions.Pizza); //Output -10
+console.log(todaysTransactions['Pizza']); //Output -10
+const transactionsOfToday = {
+    Pizza: -10,
+    Books: -5,
+    Job: 50
+};
 let prop = 'Pizza';
-console.log(todaysTransactions[prop]);
+console.log(transactionsOfToday[prop]);
 const todaysNet = (transactions) => {
     let total = 0;
     for (const transaction in transactions) {

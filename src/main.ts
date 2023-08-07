@@ -92,3 +92,30 @@ console.log(Amy.id)
 console.log(Steve.id)
 console.log(John.id)
 console.log(Peeps.count)
+
+// Getters and Setters
+class Bands {
+  private dataState: string[] //This will be our state that we are keeping track of in bands and it's going to be an array with string data
+
+  constructor() {
+    this.dataState = []
+  }
+
+  public get data(): string[] {
+    return this.dataState
+  }
+
+  public set data(value: string[]) {
+    if (Array.isArray(value) && value.every(el => typeof el === 'string')){
+      this.dataState = value
+      return 
+    } else throw new Error('Param is not an array of strings')
+  }
+}
+
+const MyBands = new Bands()
+MyBands.data = ['Agape Gospel', 'Adawange']
+console.log(MyBands.data)
+MyBands.data = [...MyBands.data, 'Timiza']
+console.log(MyBands.data)
+MyBands.data = ['Uwezo']

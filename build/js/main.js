@@ -43,3 +43,23 @@ class Guitarist {
 }
 const Page = new Guitarist('Jimmy', 'guitar');
 console.log(Page.play('strums'));
+class Peeps {
+    // we'll be keeping track of count in the class not in any one instance of the class 
+    static getCount() {
+        return Peeps.count; // notice here we don't use the keyword this, we refer to the class itself, Peeps.count
+    }
+    constructor(name) {
+        this.name = name;
+        this.name = name;
+        this.id = ++Peeps.count;
+    }
+}
+// static applies directly to the class and not to any specific object that you instantiate with the class
+Peeps.count = 0; //static means count does not apply to any instantiation of the class it applies to the class directly itself.
+const John = new Peeps('John');
+const Steve = new Peeps('Steve');
+const Amy = new Peeps('Amy');
+console.log(Amy.id);
+console.log(Steve.id);
+console.log(John.id);
+console.log(Peeps.count);

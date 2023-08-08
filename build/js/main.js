@@ -5,7 +5,8 @@
 const todaysTransactions = {
     Pizza: -10,
     Books: -5,
-    Job: 50
+    Job: 50,
+    Dave: 42 // Added Dave which was not a key in the TransactionObj because of the index signature: [index: string]: number
 };
 console.log(todaysTransactions.Pizza); //Output -10
 console.log(todaysTransactions['Pizza']); //Output -10

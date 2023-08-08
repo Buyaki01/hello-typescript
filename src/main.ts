@@ -3,7 +3,8 @@
 // TypeScript requires an index signature if you attempt to access an object property dynamically 
 
 
-interface TransactionObj {
+interface TransactionObj { //This interface would allow other properties to be added to an object that was created with this interface, however this interface will also require Pizza, Books and Job
+  readonly [index: string]: number,
   Pizza: number,
   Books: number,
   Job: number
@@ -12,7 +13,8 @@ interface TransactionObj {
 const todaysTransactions: TransactionObj = {
   Pizza: -10,
   Books: -5,
-  Job: 50
+  Job: 50,
+  Dave: 42 // Added Dave which was not a key in the TransactionObj because of the index signature: [index: string]: number
 }
 
 console.log(todaysTransactions.Pizza)//Output -10
@@ -31,7 +33,7 @@ console.log(todaysTransactions['Pizza']) //Output -10
 // }
 
 
-// Implementing the index signature
+// Implementing the index signature, when you don't know the name of the keys that you would want to use in an object
 interface TransactionObject {
   readonly [index: string]: number
 }

@@ -29,3 +29,9 @@ console.log(todaysNetIncome(transactionsOfToday));
 //TypeScript has no problem with it because it has no way to know what names we would give the keys because our interface just says it's going to be and an [index: string]: number
 // Thus Index Signature is not entirely safe as this does open up the possibility for you to try to access a key that does not exist on an object
 console.log(transactionsOfToday['Dave']); //Typescript does not give us an error message yet property Dave does not exist, it's going to return undefined because it doesn't exist on the object
+const student = {
+    name: "Doug",
+    GPA: 3.5,
+    classes: [100, 200]
+};
+// console.log(student.test) //Results in an error because property test does not exist on type 'Student'

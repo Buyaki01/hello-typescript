@@ -64,6 +64,7 @@ console.log(todaysNetIncome(transactionsOfToday))
 console.log(transactionsOfToday['Dave']) //Typescript does not give us an error message yet property Dave does not exist, it's going to return undefined because it doesn't exist on the object
 
 interface Student {
+  [key: string]: string | number | number[] | undefined //undefined because we have classes as optional
   name: string
   GPA: number,
   classes?: number[]
@@ -75,4 +76,7 @@ const student: Student = {
   classes: [100, 200]
 }
 
-// console.log(student.test) //Results in an error because property test does not exist on type 'Student'
+// console.log(student.test) // TypeScript will not have an isse with this because of the index signature, it will return undefined because property test does not exist
+// console.log(student.test) //Results in an error if you don't include the time signature: [key: string]: string | number | number[] | undefined because property test does not exist on type 'Student'
+
+

@@ -33,7 +33,7 @@ console.log(todaysTransactions['Pizza']) //Output -10
 
 // Implementing the index signature
 interface TransactionObject {
-  [index: string]: number
+  readonly [index: string]: number
 }
 
 const transactionsOfToday: TransactionObject = {
@@ -41,6 +41,8 @@ const transactionsOfToday: TransactionObject = {
   Books: -5,
   Job: 50
 }
+
+// transactionsOfToday.pizza = 40 // result into an error because TransactionObject only permits reading
 
 let prop: string = 'Pizza'
 console.log(transactionsOfToday[prop])

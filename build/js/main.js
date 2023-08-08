@@ -14,6 +14,7 @@ const transactionsOfToday = {
     Books: -5,
     Job: 50
 };
+// transactionsOfToday.pizza = 40 // result into an error because TransactionObject only permits reading
 let prop = 'Pizza';
 console.log(transactionsOfToday[prop]);
 const todaysNet = (transactions) => {

@@ -17,10 +17,14 @@ const transactionsOfToday = {
 // transactionsOfToday.pizza = 40 // result into an error because TransactionObject only permits reading
 let prop = 'Pizza';
 console.log(transactionsOfToday[prop]);
-const todaysNet = (transactions) => {
+const todaysNetIncome = (transactions) => {
     let total = 0;
     for (const transaction in transactions) {
         total += transactions[transaction];
     }
     return total;
 };
+console.log(todaysNetIncome(transactionsOfToday));
+//TypeScript has no problem with it because it has no way to know what names we would give the keys because our interface just says it's going to be and an [index: string]: number
+// Thus Index Signature is not entirely safe as this does open up the possibility for you to try to access a key that does not exist on an object
+console.log(transactionsOfToday['Dave']); //Typescript does not give us an error message yet property Dave does not exist, it's going to return undefined because it doesn't exist on the object

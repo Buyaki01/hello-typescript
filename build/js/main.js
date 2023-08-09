@@ -36,3 +36,6 @@ const student = {
 };
 // console.log(student.test) // TypeScript will not have an isse with this because of the index signature, it will return undefined because property test does not exist
 // console.log(student.test) //Results in an error if you don't include the time signature: [key: string]: string | number | number[] | undefined because property test does not exist on type 'Student'
+for (const key in student) {
+    console.log(`${key}: ${student[key]}`);
+}

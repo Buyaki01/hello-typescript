@@ -65,7 +65,10 @@ const processUser = <T extends HasID>(user: T): T => {
 console.log(processUser({ id: 1, name: 'Dave' }))
 // console.log(processUser({ name: 'Dave' })) // Result in an error. Argument of type '{ name: string; }' is not assignable to parameter of type 'HasID'. Object literal may only specify known properties, and 'name' does not exist in type 'HasID'
 
-const getUsersProperty = <T extends HasID, K extends keyof T>(users: T[], key: K): T[K][] => {
+// (users: T[], key: K): This is the function's parameter list. It's expecting an array of users and a key
+// : T[K][] =>: This part is the return type of the function. It's saying that the function will return an array of values of type T[K]. In simple terms, it means you're going to get an array of a specific property (key) from the list of users
+// users.map(user => user[key]): Inside the function, it's using the .map function to go through each user in the users array. For each user, it's accessing the property defined by the key and creating a new array with those property values
+const getUsersProperty = <T extends HasID, K extends keyof T>(users: T[], key: K): T[K][] => { //T is a type that must have an ID property, K is a type that represents a key from the properties of type T 
   return users.map(user => user[key])
 }
 
@@ -118,4 +121,4 @@ const usersArray = [
   }
 ]
 
-console.log(getUsersProperty(usersArray, "email"))
+console.log(getUsersProperty(usersArray, "email")) // Outputs: ['Sincere@april.biz', 'Shanna@melissa.tv']

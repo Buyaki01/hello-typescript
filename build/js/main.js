@@ -44,3 +44,7 @@ Object.keys(student).map(key => {
     // We are using small letter student NOT Student
     console.log(student[key]); //use typeof in a case where you don't know the type of the object student
 });
+const logStudentKey = (student, key) => {
+    console.log(`Student ${key}: ${student[key]}`);
+};
+logStudentKey(student, 'GPA'); //Output: Student GPA: 3.5

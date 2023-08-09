@@ -37,5 +37,6 @@ const student = {
 // console.log(student.test) // TypeScript will not have an isse with this because of the index signature, it will return undefined because property test does not exist
 // console.log(student.test) //Results in an error if you don't include the time signature: [key: string]: string | number | number[] | undefined because property test does not exist on type 'Student'
 for (const key in student) {
-    console.log(`${key}: ${student[key]}`);
+    //key as keyof Student: creates a union type, union type can be string, number, boolean etc and it allows us to still loop through the object  
+    console.log(`${key}: ${student[key]}`); // key as keyof Student, It's you telling TypeScript, "I'm confident that key is a valid property name that exists in the Student object."
 }

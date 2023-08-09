@@ -64,7 +64,7 @@ console.log(todaysNetIncome(transactionsOfToday))
 console.log(transactionsOfToday['Dave']) //Typescript does not give us an error message yet property Dave does not exist, it's going to return undefined because it doesn't exist on the object
 
 interface Student {
-  [key: string]: string | number | number[] | undefined //undefined because we have classes as optional
+  // [key: string]: string | number | number[] | undefined //undefined because we have classes as optional
   name: string
   GPA: number,
   classes?: number[]
@@ -80,5 +80,6 @@ const student: Student = {
 // console.log(student.test) //Results in an error if you don't include the time signature: [key: string]: string | number | number[] | undefined because property test does not exist on type 'Student'
 
 for (const key in student) {
-  console.log(`${key}: ${student[key]}`)
+  //key as keyof Student: creates a union type, union type can be string, number, boolean etc and it allows us to still loop through the object  
+  console.log(`${key}: ${student[key as keyof Student]}`) // key as keyof Student, It's you telling TypeScript, "I'm confident that key is a valid property name that exists in the Student object."
 }

@@ -40,3 +40,7 @@ for (const key in student) {
     //key as keyof Student: creates a union type, union type can be string, number, boolean etc and it allows us to still loop through the object  
     console.log(`${key}: ${student[key]}`); // key as keyof Student, It's you telling TypeScript, "I'm confident that key is a valid property name that exists in the Student object."
 }
+Object.keys(student).map(key => {
+    // We are using small letter student NOT Student
+    console.log(student[key]); //use typeof in a case where you don't know the type of the object student
+});

@@ -48,3 +48,12 @@ const logStudentKey = (student, key) => {
     console.log(`Student ${key}: ${student[key]}`);
 };
 logStudentKey(student, 'GPA'); //Output: Student GPA: 3.5
+const monthlyIncomes = {
+    salary: 500,
+    bonus: 100,
+    sidehustle: 250
+};
+// Checking whether we can loop through Record Utility Type
+for (const revenue in monthlyIncomes) {
+    console.log(monthlyIncomes[revenue]);
+}

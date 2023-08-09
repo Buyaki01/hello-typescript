@@ -94,3 +94,23 @@ const logStudentKey = (student: Student, key: keyof Student): void => {
 }
 
 logStudentKey(student, 'GPA') //Output: Student GPA: 3.5
+
+// interface Incomes {
+//  [key: 'salary']: number //Will result in an error because an index signature parameter type cannot be a literal type or generic type
+// }
+
+type Streams = 'salary' | 'bonus' | 'sidehustle' //string literals
+
+// One drawback of using a Record Utility Type is that, one is unable to declare specifically the data type of a specific key, with Streams below it means that all of the keys will be either numbers or string, whereas you might wanted something like key Pizza to be specifically a string and not a number
+type Incomes = Record<Streams, number | string> //whenever we want to use a string literal we can use Record utility type
+
+const monthlyIncomes: Incomes = {
+  salary: 500,
+  bonus: 100,
+  sidehustle: 250
+}
+
+// Checking whether we can loop through Record Utility Type
+for (const revenue in monthlyIncomes) {
+  console.log(monthlyIncomes[revenue as keyof Incomes])
+}

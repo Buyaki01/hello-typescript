@@ -86,3 +86,20 @@ type highGrades = Extract<LetterGrades, "A" | "B">
 type AllPossibleGrades = 'Dave' | 'John' | null | undefined
 
 type NamesOnly = NonNullable<AllPossibleGrades> //Excludes both null and undefined
+
+
+// Return Type
+// type newAssign = { title: string, points: number }
+
+// const createNewAssign = (title: string, points: number) => {
+//   return { title, points }
+// }
+
+const createNewAssign = (title: string, points: number) => {
+  return { title, points }
+}
+
+type NewAssign = ReturnType<typeof createNewAssign> // essential when working with functions you did not create, so you bring in something from a library and then you update that library and it's changed the function and the return is different 
+
+const tsAssign: NewAssign = createNewAssign("Utility Types", 100)
+console.log(tsAssign)

@@ -74,3 +74,9 @@ const preview: AssignPreview = {
   studentId: "k123",
   title: "Final Project",
 }
+
+
+// Exclude and Extract
+type adjustedGrade = Exclude<LetterGrades, "U">
+
+type highGrades = Extract<LetterGrades, "A" | "B">

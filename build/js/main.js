@@ -103,3 +103,21 @@ const usersArray = [
     }
 ];
 console.log(getUsersProperty(usersArray, "email")); // Outputs: ['Sincere@april.biz', 'Shanna@melissa.tv']
+class StateObject {
+    constructor(value) {
+        this.data = value;
+    }
+    get state() {
+        return this.data;
+    }
+    set state(value) {
+        this.data = value;
+    }
+}
+const store = new StateObject("John");
+console.log(store.state);
+store.state = "Dave";
+// store.state = 12 // Results into an error because instantly after we assign John, TypeScript inferred that's the type of our state and it's not going to accept another type
+const myState = new StateObject([15]);
+myState.state = (['Dave', 42, true]);
+console.log(myState.state);

@@ -19,3 +19,17 @@ const assignVerified = Object.assign(Object.assign({}, assignGraded), { verified
 // assignVerified.grade = 88 //won't work because assignVerified is Readonly
 // recordAssignment(assignGraded) // will result in an error because its missing property verified and its Required
 recordAssignment(Object.assign(Object.assign({}, assignGraded), { verified: true }));
+// Record
+const hexColorMap = {
+    red: "FF0000",
+    green: "00FF00",
+    blue: "0000FF",
+};
+const finalGrades = {
+    Sara: "B",
+    Kelly: "U"
+};
+const gradeData = {
+    Sara: { assign1: 85, assign2: 93 },
+    Kelly: { assign1: 76, assign2: 15 }
+};
